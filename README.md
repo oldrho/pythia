@@ -4,9 +4,9 @@
 
 ## Description
 
-> To those who ask for oracles
-> Let the God's answer come
->    - Pythian Priests
+> To those who ask for oracles<br>
+> Let the God's answer come<br>
+>   \- Pythian Priests
 
 While completing a CTF recently I needed to exploit a padding oracle with custom encoding and then further exploit another service through it. While I had some success with already available scripts, they were very slow. They also did not integrate well with the rest of the attack chain and required a lot of hands-on work.
 
