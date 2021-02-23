@@ -35,7 +35,7 @@ class Stream:
 
 		# Validate padding
 		pad_value = result[-1]
-		if pad_value == 0 or pad_value > 16:
+		if pad_value == 0 or pad_value > bl:
 			raise Exception
 		if not all([x == pad_value for x in result[-pad_value:]]):
 			raise Exception
@@ -49,7 +49,7 @@ class Stream:
 		data = list(data)
 		pad_value = bl-(len(data)%bl)
 		if pad_value == 0:
-			pad_value = 16
+			pad_value = bl
 		data += [pad_value]*pad_value
 
 		# Block count = IV + final ciphertext
