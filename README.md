@@ -21,9 +21,9 @@ import requests
 def oracle(data):
 	url = b'http://website.example/?data=' + data.hex()
 	response = requests.get(url)
-	return not b'Padding Error' in response.text
+	return not b'Padding Error' in response.content
 
-stream = Pythia.Stream(16, oracle, threads=100)
+stream = pythia.Stream(16, oracle, threads=100)
 decrypted = stream.decrypt(ciphertext)
 encrypted = stream.encrypt(plaintext)
 ```
